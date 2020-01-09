@@ -1,3 +1,5 @@
+//https://kipalog.com/posts/Huong-dan-lap-trinh-Spring-Security
+//
 package com.codegym.security.services;
 import com.codegym.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;

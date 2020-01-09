@@ -19,6 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 
 @Configuration
+//Kích hoạt Spring security vơi MVC
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
         prePostEnabled = true
@@ -26,6 +27,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserDetailsServiceImpl userDetailsService;
+
 
     @Autowired
     private JwtAuthEntryPoint unauthorizedHandler;
@@ -48,6 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
+    //Mã hóa mật khẩu
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
